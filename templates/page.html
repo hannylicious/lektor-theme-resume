@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto">
+      <h2>{{ this.title }}</h2>
+      {{ this.body }}
+  </div>
+</section>
+{% endblock %}

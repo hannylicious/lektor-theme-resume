@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% from "macros/experience.html" import render_experience_post %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}{{ this.role }}{% endblock %}
+{% block body %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto">
+  	<h2 class="mb-5">Experience</h2>
+  {% for child in this.pagination.items %}
+    {{ render_experience_post(child, from_index=true) }}
+  {% endfor %}
+
+
+</div>
+</section>
+{% endblock %}

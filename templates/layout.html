@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ this.meta_description or this._slug }}">
+    <meta name="keywords" content="{{ this.meta_keywords or this._slug }}">
+    {# TODO: enable something like the following by testing for these filters first #}
+    {#{% if (striphtmltags is defined) and (firstsentence is defined) %}
+      <meta name="description" content="{{ this.meta_description or this.body|striphtmltags|firstsentence or this._slug }}">
+    {% endif %}
+    {% if (striphtmltags is defined) and (keywords is defined) %}
+      <meta name="keywords" content="{{ this.meta_keywords or this.body|striphtmltags|keywords|join(', ') or this._slug }}">
+    {% endif %}#}
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" href="{{ '/static/images/favicons/favicon.png'|asseturl }}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{'vendor/bootstrap/css/bootstrap.min.css'|asseturl}}" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="{{ 'vendor/font-awesome/css/font-awesome.min.css'|asseturl }}" rel="stylesheet">
+    <link href="{{ 'vendor/devicons/css/devicons.min.css'|asseturl }}" rel="stylesheet">
+    <link href="{{'vendor/simple-line-icons/css/simple-line-icons.css'|asseturl}}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{'css/resume.min.css'|asseturl}}" rel="stylesheet">
+      <!-- Google Analytics -->
+      {% if config.THEME_SETTINGS.googleanalytics %}
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         ga('create', '{{ config.THEME_SETTINGS.googleanalytics }}', 'auto');
+         ga('send', 'pageview');
+        </script>
+      {% endif %}
+      {% block header_scripts %}{% endblock header_scripts %}
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="{{ '/'|url }}">
+        <span class="d-block d-lg-none">
+          {% if config.THEME_SETTINGS.site %}
+            {{ config.THEME_SETTINGS.site }}
+          {% elif config.THEME_SETTINGS.user %}
+            {{ config.THEME_SETTINGS.user }}
+          {% endif %}
+        </span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{'img/profile.jpg'|asseturl}}" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav">
+            <li {% if this._path == '/' %} class="nav-item active" {% else %} class="nav-item" {% endif %}><a class="nav-link" href="{{ '/'|url }}">About</a></li>
+              {% for href, title in [
+                ['/experience', 'Experience'],
+                ['/skills', 'Skills'],
+                ['/blog', 'Blog'],
+                ['/projects', 'Projects']
+              ] %}
+              <li {% if this.is_child_of(href) %} class="nav-item active" {% else %} class="nav-item"{% endif
+                %}><a class="nav-link" href="{{ href|url }}">{{ title }}</a></li>
+            {% endfor %}
+          </ul>
+      </div>
+    </nav>
+  <div class="page">
+    {% block body %}{% endblock %}
+  </div>
+  <footer>
+    {% block footer %}
+    &copy; Copyright 2018 {{ config.THEME_SETTINGS.user }}
+    {% endblock footer %}
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{'vendor/jquery/jquery.min.js'|asseturl}}"></script>
+  <script src="{{'vendor/bootstrap/js/bootstrap.bundle.min.js'|asseturl}}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{{'vendor/jquery-easing/jquery.easing.min.js'|asseturl}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{'js/resume.min.js'|asseturl}}"></script>
+</body>
+</html>

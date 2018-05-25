@@ -1,0 +1,82 @@
+      <ul class="list-inline list-social-icons mb-0">
+        {% if config.THEME_SETTINGS.facebookID %}
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/{{ config.THEME_SETTINGS.facebookID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+        {% if config.THEME_SETTINGS.twitterID %}
+        <li class="list-inline-item">
+          <a href="https://twitter.com/{{ config.THEME_SETTINGS.twitterID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+        {% if config.THEME_SETTINGS.instagramID %}
+        <li class="list-inline-item">
+          <a href="https://instagram.com/{{ config.THEME_SETTINGS.instagramID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+        {% if config.THEME_SETTINGS.githubID %}
+        <li class="list-inline-item">
+          <a href="https://github.com/{{ config.THEME_SETTINGS.githubID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}        
+        {% if config.THEME_SETTINGS.gitlabID %}
+        <li class="list-inline-item">
+          <a href="https://gitlab.com/{{ config.THEME_SETTINGS.gitlabID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+        {% if config.THEME_SETTINGS.codepenID %}
+        <li class="list-inline-item">
+          <a href="https://codepen.com/{{ config.THEME_SETTINGS.codepenID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-codepen fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}                             
+        {% if config.THEME_SETTINGS.linkedInURL %}
+        <li class="list-inline-item">
+          <a href="{{ config.THEME_SETTINGS.linkedInURL }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+        {% if config.THEME_SETTINGS.googleplusID %}
+        <li class="list-inline-item">
+          <a href="https://plus.google.com/u/0/+{{ config.THEME_SETTINGS.googleplusID }}" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-google-plus-official fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        {% endif %}           
+      </ul>

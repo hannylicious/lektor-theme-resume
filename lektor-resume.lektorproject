@@ -1,0 +1,28 @@
+[project]
+name = lektor-resume
+
+[theme_settings]
+	first_name = "Roger"
+	last_name = "Williams"
+	name = "Roger Williams"
+	street = "123 Somewhere Dr."
+	city = "Chicago"
+	state = "Illinois" 
+	zip = "60007"
+	phone = "(312)555-4567"
+	email = "your_email@yourdomain.com"
+	about = "info_about_you"		
+	site = "rogerwilliams.com"
+	googleanalytics = "your_google_analytics_id"
+	facebookID = "your_facebook"
+	twitterID = "your_twitter"
+	instagramID = "your_instagram"
+	githubID = "your_github"
+	gitlabID = "your_gitlab"
+	codepenID = "your_codepen"
+	linkedInURL = "your_linkedin"
+	googleplusID = "your_googleplus"
+	profilepicture = "profile_picture_asset_url"
+	googleanalytics = "your_google_analytics_id"
+	slackURL = "https://join.slack.com/..."
+	comments = "yes"	

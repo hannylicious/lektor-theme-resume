@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<div class="container-fluid p-0">
+
+  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="my-auto">
+      <h1 class="mb-0">{{config.THEME_SETTINGS.first_name}}
+        <span class="text-primary">{{config.THEME_SETTINGS.last_name}}</span>
+      </h1>
+      <div class="subheading mb-5">
+      {% if config.THEME_SETTINGS.street %}
+        {{config.THEME_SETTINGS.street}} ·
+      {% endif %}
+      {% if config.THEME_SETTINGS.city %}
+        {{config.THEME_SETTINGS.city}},
+      {% endif %}
+      {% if config.THEME_SETTINGS.state %}
+          {{config.THEME_SETTINGS.state}}
+      {% endif %}
+      {% if config.THEME_SETTINGS.zip %}
+          {{config.THEME_SETTINGS.zip}} ·
+      {% endif %}
+      {% if config.THEME_SETTINGS.phone %}
+            {{config.THEME_SETTINGS.phone}} ·
+      {% endif %}
+        <a href="mailto:{{config.THEME_SETTINGS.email}}">{{config.THEME_SETTINGS.email}}</a>
+      </div>
+      <h2>{{this.title}}</h2>
+      <p class="mb-5">{{this.body}}</p>   
+      {% include "includes/social_row.html" %}
+    </div>
+  </section>
+
+</div>
+{% endblock %}

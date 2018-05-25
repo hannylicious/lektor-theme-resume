@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% from "macros/project.html" import render_project_post %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto">
+  {{ render_project_post(this) }}
+</div>
+</section>
+{% endblock %}

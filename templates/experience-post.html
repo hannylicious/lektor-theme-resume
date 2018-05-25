@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% from "macros/experience.html" import render_experience_post %}
+{% block title %}{{ this.role }}{% endblock %}
+{% block body %}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto">
+  {{ render_experience_post(this) }}
+</div>
+</section>
+{% endblock %}

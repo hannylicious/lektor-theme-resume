@@ -1,0 +1,30 @@
+{% macro render_project_post(post, from_index=false) %}
+  <div class="project-post">
+  {% if from_index %}
+    <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
+    <div class="subheading mb-3">{{ post.languages }}</div>
+    <div class="subheading mb-3">{{ post.frameworks }}</div>
+  {% else %}
+    <h2>{{ post.title }}</h2>
+    <div class="subheading mb-3">Languages: {{ post.languages }}</div>
+    <div class="subheading mb-3">Frameworks: {{ post.frameworks }}</div>
+  {% endif %}
+  <p class="meta">
+    Written by
+    {% if post.twitter_handle %}
+      <a href="https://twitter.com/{{ post.twitter_handle
+        }}">{{ post.author or post.twitter_handle }}</a>
+    {% else %}
+      {{ post.author }}
+    {% endif %}
+    on {{ post.pub_date }}
+  </p>
+  {% if not from_index %}
+  {{ post.body }}
+  {% endif %}
+  </div>
+  {% if render_disqus_comments is defined %}
+  <br>
+  <div class="comments">{{ render_disqus_comments() }}</div>
+{% endif %}
+{% endmacro %}
