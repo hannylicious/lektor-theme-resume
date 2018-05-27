@@ -1,6 +1,9 @@
 [project]
 name = lektor-resume
 
+[servers.ghpages]
+target = ghpages+https://hannylicious/lektor-theme-resume
+
 [theme_settings]
 	first_name = "Roger"
 	last_name = "Williams"
