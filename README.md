@@ -18,34 +18,34 @@ Add params in the `.lektorproject file`
 
 ```ini
 [theme_settings]
-	first_name = "Roger"
-	last_name = "Williams"
-	name = "Roger Williams"
-	street = "123 Somewhere Dr."
-	city = "Chicago"
-	state = "Illinois" 
-	zip = "60007"
-	phone = "(312)555-4567"
-	email = "your_email@yourdomain.com"
-	about = "info_about_you"		
-	site = "rogerwilliams.com"
-	googleanalytics = "your_google_analytics_id"
-	facebookID = "your_facebook"
-	twitterID = "your_twitter"
-	instagramID = "your_instagram"
-	githubID = "your_github"
-	gitlabID = "your_gitlab"
-	codepenID = "your_codepen"
-	linkedInURL = "your_linkedin"
-	googleplusID = "your_googleplus"
-	profilepicture = "profile_picture_asset_url"
-	googleanalytics = "your_google_analytics_id"
-	slackURL = "https://join.slack.com/..."
-	comments = "yes"	
+first_name = Roger
+last_name = Williams
+name = Roger Williams
+street = 123 Somewhere Dr.
+city = Chicago
+state = Illinois
+zip = 60007
+phone = (312)555-4567
+email = your_email@yourdomain.com
+about = info_about_you
+site = rogerwilliams.com
+googleanalytics = your_google_analytics_id
+facebookID = your_facebook
+twitterID = your_twitter
+instagramID = your_instagram
+githubID = your_github
+gitlabID = your_gitlab
+codepenID = your_codepen
+linkedInURL = your_linkedin
+googleplusID = your_googleplus
+profilepicture = profile_picture_asset_url
+googleanalytics = your_google_analytics_id
+slackURL = https://join.slack.com/...
+comments = yes
 ```
 
 Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments).
 
 ## License
 
-Terminal is licensed under the [MIT license](LICENSE.md)
+Resume is licensed under the [MIT license](LICENSE.md)
